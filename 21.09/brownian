@@ -1,0 +1,9 @@
+import turtle
+from random import *
+
+turtle.shape('turtle')
+
+for i in range(1000):
+	turtle.speed(30)
+	turtle.forward(random()*100)
+	turtle.left(randint(1, 360))
