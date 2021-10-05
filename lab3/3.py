@@ -10,9 +10,11 @@ screen = pygame.display.set_mode((900, 400))
 
 def draw_trava(surface, color):
 	rect(surface, color, (30, 230, 800, 120))
+#color - цвет травы
 	
 def draw_nebo(surface, color):
 	rect(surface, color, (30, 40, 800, 190))
+#color - цвет неба
 
 def draw_cloud(surface, x, y, color):
 	circle(surface, color, (x, y), 20)
@@ -21,7 +23,8 @@ def draw_cloud(surface, x, y, color):
 	circle(surface, color, (x+25, y-30), 20)
 	circle(surface, color, (x+40, y-25), 20)
 	circle(surface, color, (x+60, y-10), 20)
-	
+#x, y - точки, принадлежащей облаку (центр одной из составляющих); color - цвет облака
+
 def draw_domik(surface, x, y, k, color1, color2, color3, color4):
 	rect(surface, color1, (x, y, 190*k, 120*k))
 	rect(surface, color2, (x, y, 190*k, 120*k), 2)
@@ -29,9 +32,12 @@ def draw_domik(surface, x, y, k, color1, color2, color3, color4):
 	polygon(surface, color2, [(x, y), (x+190*k, y), (x+95*k, y-60*k)], 1) 
 	rect(surface, color4, (x+65*k, y+35*k, 60*k, 45*k))
 	rect(surface, color2, (x+65*k, y+35*k, 60*k, 45*k),3)
+#x,y - координаты левого верхнего угла основной части дома; k - коэффициент размера; color1 - цвет "стен"; 
+#color2 - цвет контуров; color3 - цвет крыши; color4 - цвет окна
 	
 def draw_sun (surface, x, y, color):
 	circle(screen, color, (x, y), 30)
+#x,y - координаты центра солнца; color - цвет солнца
 
 def draw_derevo (surface, x, y, k, color1, color2, color3):
 	rect(surface, color1, (x+12, y, 8*k, 60*k))
@@ -44,6 +50,8 @@ def draw_derevo (surface, x, y, k, color1, color2, color3):
 	circle(surface, color3, (x+20, y+5), 15*k)
 	circle(surface, color3, (x+15, y-15), 15*k)
 	circle(surface, color2, (x+30, y), 15*k)
+#x,y - координаты точки, принадлежащей кроне (центр одной из составляющих); k - коэффициент размера; color1 - цвет ствол;
+#color2 и color3 - два цвета кроны
 	
 #fon
 draw_trava(screen, (92,206,113))
